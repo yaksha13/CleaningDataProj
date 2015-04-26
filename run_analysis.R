@@ -40,7 +40,8 @@ rm(dftest,dftrain, subtest, subtrain, xtest, xtrain, ytest, ytrain)
 
 
 # Extracts only measurements on mean & std dev for each measurement
-	## Excludes GravityMean() as that is considered as different from just mean()
+	## Excludes gravityMean() as that is an angle measurement
+    ## Includes meanFreq() type variables as they are an average type/ mean measurement
 
 ordermean <- grep("mean()",labels[,2])
 orderstd <- grep ("std()", labels[,2])
