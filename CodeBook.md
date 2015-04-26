@@ -19,11 +19,11 @@ The above links also contain detailed information on the Study design followed f
 ### Guide to create the tidy data file
 
 In order to create the tidy data set on your local machine
-1. Download this repo in your local machine and set it as your working directory
-2. Download the raw data from this link:[https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and unzip the file
-3. Place the raw data folder "UCI HAR Dataset" inside the repo folder (which is set as your working directory)
-4. Run the run_analysis.R script and wait (processing the data may take a minute or so)
-5. You should now have a tidy data file ("tidydataset.txt") within the same directory
+- Download this repo in your local machine and set it as your working directory
+- Download the raw data from this link:[https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and unzip the file
+- Place the raw data folder "UCI HAR Dataset" inside the repo folder (which is set as your working directory)
+- Run the run_analysis.R script and wait (processing the data may take a minute or so)
+- You should now have a tidy data file ("tidydataset.txt") within the same directory
 
 A sample of the tidy data set created using the run_analysis.R script is available at [https://s3.amazonaws.com/coursera-uploads/user-5148c4bb98a5b56203474727/973500/asst-3/53114f10ebec11e4a9166b9aa399b77f.txt](https://s3.amazonaws.com/coursera-uploads/user-5148c4bb98a5b56203474727/973500/asst-3/53114f10ebec11e4a9166b9aa399b77f.txt)
 
