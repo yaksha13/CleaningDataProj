@@ -25,12 +25,12 @@ In order to create the tidy data set on your local machine
 - Run the run_analysis.R script and wait (processing the data may take a minute or so)
 - You should now have a tidy data file ("tidydataset.txt") within the same directory
 
-A sample of the tidy data set created using the run_analysis.R script is available at [https://s3.amazonaws.com/coursera-uploads/user-5148c4bb98a5b56203474727/973500/asst-3/53114f10ebec11e4a9166b9aa399b77f.txt](https://s3.amazonaws.com/coursera-uploads/user-5148c4bb98a5b56203474727/973500/asst-3/53114f10ebec11e4a9166b9aa399b77f.txt)
+A sample of the tidy data set created using the `run_analysis.R` script is available at [https://s3.amazonaws.com/coursera-uploads/user-5148c4bb98a5b56203474727/973500/asst-3/53114f10ebec11e4a9166b9aa399b77f.txt](https://s3.amazonaws.com/coursera-uploads/user-5148c4bb98a5b56203474727/973500/asst-3/53114f10ebec11e4a9166b9aa399b77f.txt)
 
 ##Description of the variables in the tinydataset.txt file
  
 tidydataset has 14220 observations of 4 variables
-Variables present in the dataset: subject, activity, feature, featureValue
+Variables present in the dataset: `subject`, `activity`, `feature`, `featureValue`
 
 ### subject
 Class: integer
@@ -41,6 +41,7 @@ Description: id of the Subject for whom the the activity, and feature observatio
 ### activity
 Class: factor
 Unique values/levels: 6 levels
+
 	1 "WALKING"
 	2 "WALKING_UPSTAIRS"
 	3 "WALKING_DOWNSTAIRS"
@@ -53,6 +54,7 @@ Description: The type of activity the subject was performing for which the data/
 ### feature
 Class: factor
 Unique values/levels: 79 levels
+
 	1 "tBodyAcc-mean()-X"
 	2 "tBodyAcc-mean()-Y"
 	3 "tBodyAcc-mean()-Z"
@@ -135,10 +137,10 @@ Unique values/levels: 79 levels
 
 	
 Unit of measurement: No unit of measurement. Only Character Name of Variable
-Description: The type of feature observation which was measured. These are directly associated with the "featureValue" and are for multiple iterations of observations for each "subject" and each type of "activity"
+Description: The type of feature observation which was measured. These are directly associated with the `featureValue` and are for multiple iterations of observations for each `subject` and each type of `activity`
 
 
-*The features present in this data set are derived from the mean(), std() and meanFreq() variables estimated from the signals described below:*
+*The features present in this data set are derived from the `mean()`, `std()` and `meanFreq()` variables estimated from the signals described below:*
 
 The features for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
@@ -149,35 +151,35 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions. Each axis is present as a separate variable
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+	1 tBodyAcc-XYZ
+	2 tGravityAcc-XYZ
+	3 tBodyAccJerk-XYZ
+	4 tBodyGyro-XYZ
+	5 tBodyGyroJerk-XYZ
+	6 tBodyAccMag
+	7 tGravityAccMag
+	8 tBodyAccJerkMag
+	9 tBodyGyroMag
+	10 tBodyGyroJerkMag
+	11 fBodyAcc-XYZ
+	12 fBodyAccJerk-XYZ
+	13 fBodyGyro-XYZ
+	14 fBodyAccMag
+	15 fBodyAccJerkMag
+	16 fBodyGyroMag
+	17 fBodyGyroJerkMag
 
 The suffixes imply the following:
-mean(): Mean value
-std(): Standard deviation
-meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+- `mean()`: Mean value
+- `std()`: Standard deviation
+- `meanFreq()`: Weighted average of the frequency components to obtain a mean frequency
 
 
 
 ### featureValue
 Class: numeric
 Unique values/levels: NA
-Unit of measurement: The unit of measurement for each "featureValue" is related to the associated "feature"
+Unit of measurement: The unit of measurement for each `featureValue` is related to the associated `feature`
 
 Description: The type of activity the subject was performing for which the data/ feature observations were recorded.
-Additionally, the "featureValue" are **averaged** over multiple observations for a specific "feature"  grouped by each "activity" and each "subject"
+Additionally, the `featureValue` are **averaged** over multiple observations for a specific `feature`  grouped by each `activity` and each `subject`
