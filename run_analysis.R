@@ -72,5 +72,5 @@ tidyData <- melt(tidyData, id = c("Subject","Activity"))
 setnames(tidyData,c("subject", "activity","feature","featureValue"))
 
 ## Write the tidy data set to a txt file named "tidydataset.txt"
-write.table(tidyData,file = "tidydataset.txt",row.names = FALSE)
+write.table(tidyData,file = "tidydataset.txt", row.name = FALSE)
 
