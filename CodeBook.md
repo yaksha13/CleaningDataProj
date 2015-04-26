@@ -140,7 +140,7 @@ Unit of measurement: No unit of measurement. Only Character Name of Variable
 Description: The type of feature observation which was measured. These are directly associated with the `featureValue` and are for multiple iterations of observations for each `subject` and each type of `activity`
 
 
-*The features present in this data set are derived from the `mean()`, `std()` and `meanFreq()` variables estimated from the signals described below:*
+***The features present in this data set are derived from the `mean()`, `std()` and `meanFreq()` variables estimated from the signals described below:***
 
 The features for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
