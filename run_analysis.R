@@ -2,7 +2,7 @@
 # Assume that the UCI HAR Dataset folder is in the current working directory
 # 1. Merge training & test sets to create one data set
 ## Read in the data from the train and test data files
-library(dplyr)
+library(data.table)
 library(reshape2)
 
 xtrain<-read.table("UCI HAR Dataset/train/X_train.txt")
@@ -49,3 +49,28 @@ for (i in 1: nrow(newData)){
 
 # 5. From 4, create a second tidy data set with average of each variable
 ##   for each activity and each subject.
+# We assign create the tidy data as a data.table
+newData1 <- data.table(newData)
+tidyData <- data.table()
+for (i in 1:30){
+    tempData<- newData1[newData1$Subject == i]
+    tidyData<- rbind(tidyData,tempData[,lapply(.SD, mean), by =  Activity])
+}
+rm(newData1,tempData)
+    ## After the above transoformation each of the variables represents 
+    ## averaged values of the measurements over several observations for each 
+    ## Subject and for each Activity performed by him/ her
+
+# Now the dataset is essentially 180 observations of 81 variables
+# While this is tidy as each column represents a unique type of measurement
+# In order to better document the data set structure we can combine all features 
+# into a single column using the melt function
+
+## Melt with Subject and Activity as ids and rest as measures
+tidyData <- melt(tidyData, id = c("Subject","Activity"))
+## Rename the columns
+setnames(tidyData,c("subject", "activity","feature","featureValue"))
+
+## Write the tidy data set to a txt file named "tidydataset.txt"
+write.table(tidyData,file = "tidydataset.txt",row.names = FALSE)
+
